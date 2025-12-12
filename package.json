@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "nitro build",
+    "dev": "nitro dev",
+    "preview": "npx srvx --prod .output/ --port 4000"
+  },
+  "devDependencies": {
+    "nitro": "latest",
+    "rolldown": "latest"
+  }
+}
