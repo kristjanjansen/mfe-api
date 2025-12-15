@@ -15,7 +15,6 @@ export default {
         meta: {
           timestamp: new Date().toISOString(),
           env: {
-            BILLING_BACKEND_URL2: "test",
             BILLING_BACKEND_URL: process.env.BILLING_BACKEND_URL,
           },
         },
