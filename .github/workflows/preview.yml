@@ -8,5 +8,5 @@ jobs:
   preview:
     uses: kristjanjansen/mf-infra/.github/workflows/preview.yml@main
     with:
-      service_name: mf-billing-api
+      service_name: mf-api
       port: 4000
