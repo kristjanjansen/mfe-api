@@ -1,12 +1,11 @@
 {
   "type": "module",
   "scripts": {
-    "build": "nitro build",
-    "dev": "nitro dev",
-    "preview": "npx srvx --prod .output/ --port 4000"
+    "dev": "node --watch server.ts",
+    "start": "node server.ts"
   },
-  "devDependencies": {
-    "nitro": "latest",
-    "rolldown": "latest"
+  "dependencies": {
+    "@hono/node-server": "^1",
+    "hono": "^4"
   }
 }

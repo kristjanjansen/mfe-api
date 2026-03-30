@@ -1,20 +1,12 @@
-# Build stage
 FROM node:22-alpine
 
 WORKDIR /app
 
-# Install dependencies
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --omit=dev
 
-# Copy the rest of the source code
-COPY . .
+COPY server.ts ./
 
-# Build the Vite app
-RUN npm run build -- --mode services
-
-# Expose HTTP port 4000
 EXPOSE 4000
 
-# Run npm run preview in the foreground
-CMD ["npm", "run", "preview", "--", "--port", "4000", "--host", "0.0.0.0"]
+CMD ["node", "server.ts"]
